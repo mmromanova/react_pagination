@@ -38,7 +38,9 @@ export const Pagination: React.FC<Props> = ({
           return (
             <li
               key={pageNumber}
-              className={classNames('page-item', { active: pageNumber === currentPage })}
+              className={classNames('page-item', {
+                active: pageNumber === currentPage,
+              })}
             >
               <button
                 data-cy="pageLink"
@@ -52,7 +54,9 @@ export const Pagination: React.FC<Props> = ({
         })}
 
         <li
-          className={classNames('page-item', { disabled: currentPage === totalPages })}
+          className={classNames('page-item', {
+            disabled: currentPage === totalPages,
+          })}
         >
           <button
             data-cy="nextLink"
